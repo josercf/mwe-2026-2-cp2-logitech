@@ -1,0 +1,42 @@
+$ dotnet test Faturamento.sln --logger "console;verbosity=normal"
+  Determining projects to restore...
+  Restored /workspaces/mwe-2026-2-cp2/servicos/faturamento/src/Faturamento.Api/Faturamento.Api.csproj (in 3.61 sec).
+  Restored /workspaces/mwe-2026-2-cp2/servicos/faturamento/ferramentas/Carga/Carga.csproj (in 3.61 sec).
+  Restored /workspaces/mwe-2026-2-cp2/servicos/faturamento/tests/Faturamento.Tests/Faturamento.Tests.csproj (in 3.61 sec).
+  Faturamento.Api -> /workspaces/mwe-2026-2-cp2/servicos/faturamento/src/Faturamento.Api/bin/Debug/net8.0/Faturamento.Api.dll
+  Faturamento.Tests -> /workspaces/mwe-2026-2-cp2/servicos/faturamento/tests/Faturamento.Tests/bin/Debug/net8.0/Faturamento.Tests.dll
+Test run for /workspaces/mwe-2026-2-cp2/servicos/faturamento/tests/Faturamento.Tests/bin/Debug/net8.0/Faturamento.Tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (arm64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.31)
+[xUnit.net 00:00:00.11]   Discovering: Faturamento.Tests
+[xUnit.net 00:00:00.14]   Discovered:  Faturamento.Tests
+[xUnit.net 00:00:00.14]   Starting:    Faturamento.Tests
+  Passed Faturamento.Tests.CatalogoAliquotasTests.DevolveAAliquotaDoCodigoDeServico(codigo: "16.01", esperada: "0.05") [15 ms]
+  Passed Faturamento.Tests.CatalogoAliquotasTests.DevolveAAliquotaDoCodigoDeServico(codigo: "11.02", esperada: "0.02") [< 1 ms]
+  Passed Faturamento.Tests.CatalogoAliquotasTests.DevolveAAliquotaDoCodigoDeServico(codigo: "11.04", esperada: "0.03") [< 1 ms]
+  Passed Faturamento.Tests.CatalogoAliquotasTests.RecusaCodigoForaDoCatalogo [< 1 ms]
+  Passed Faturamento.Tests.ConexaoPostgresTests.TraduzUrlJdbcParaCadeiaDoNpgsql [< 1 ms]
+  Passed Faturamento.Tests.ConexaoPostgresTests.RepassaCadeiaQueJaVeioNoFormatoDoNpgsql [< 1 ms]
+  Passed Faturamento.Tests.ConexaoPostgresTests.RecusaUrlVazia [< 1 ms]
+  Passed Faturamento.Tests.NumeradorNotaFiscalTests.ChamadasSequenciaisDevolvemNumerosCrescentes [< 1 ms]
+  Passed Faturamento.Tests.NumeradorNotaFiscalTests.NumeracaoContinuaDoUltimoGravadoNoBanco [< 1 ms]
+  Passed Faturamento.Tests.NumeradorNotaFiscalTests.MilChamadasSequenciaisNaoRepetemNumero [1 ms]
+  Passed Faturamento.Tests.NumeradorNotaFiscalTests.AcessosConcorrentesRecebemAMesmaInstancia [3 ms]
+  Passed Faturamento.Tests.NumeradorNotaFiscalTests.SequencialForaDoFormatoViraZero [< 1 ms]
+  Passed Faturamento.Tests.NumeradorNotaFiscalTests.FormatoDoNumeroSegueOContratoDaPlataforma [< 1 ms]
+  Passed Faturamento.Tests.FaturaServiceTests.EmitirParaPedidosDiferentesGeraNotasDiferentes [17 ms]
+  Passed Faturamento.Tests.FaturaServiceTests.EmitirDuasVezesParaOMesmoPedidoNaoGeraDuasNotas [1 ms]
+  Passed Faturamento.Tests.FaturaServiceTests.ValorNaoPositivoEhRecusadoPeloDominio [< 1 ms]
+  Passed Faturamento.Tests.FaturaServiceTests.EmitirGeraNotaFiscalNoFormatoDoContrato [1 ms]
+  Passed Faturamento.Tests.FaturaServiceTests.PrazoDoClienteViraVencimentoDaFatura [< 1 ms]
+[xUnit.net 00:00:00.22]   Finished:    Faturamento.Tests
+  Passed Faturamento.Tests.FaturaServiceTests.IssDoTransporteMunicipalEntraNaFatura [< 1 ms]
+  Passed Faturamento.Tests.FaturaServiceTests.EmissaoFicaRegistradaNaAuditoria [< 1 ms]
+
+Test Run Successful.
+Total tests: 20
+     Passed: 20
+ Total time: 0.6954 Seconds

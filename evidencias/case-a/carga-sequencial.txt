@@ -1,0 +1,16 @@
+$ dotnet run -c Release --no-build --project ferramentas/Carga -- --inicio 4200 --emissoes 1000 --sequencial --log /tmp/auditoria-sequencial.log
+carga do faturamento
+modo: sequencial
+emissões solicitadas: 1000
+trabalhadores: 1
+numeração iniciada em: 4200
+processador lógico disponível: 10
+tempo: 17 ms
+instâncias de NumeradorNotaFiscal observadas: 1
+faturas emitidas: 1000
+pedidos distintos: 1000
+números de nota distintos: 1000
+último sequencial do numerador: 5200
+números de nota repetidos: 0
+faturas com número repetido: 0
+trilha de auditoria: /tmp/auditoria-sequencial.log

@@ -1,0 +1,27 @@
+$ dotnet run -c Release --no-build --project ferramentas/Carga -- --inicio 4200 --emissoes 1000 --trabalhadores 16 --log ../../evidencias/case-a/auditoria-carga-1.log
+carga do faturamento
+modo: concorrente
+emissões solicitadas: 1000
+trabalhadores: 16
+numeração iniciada em: 4200
+processador lógico disponível: 10
+tempo: 30 ms
+instâncias de NumeradorNotaFiscal observadas: 1
+faturas emitidas: 1000
+pedidos distintos: 1000
+números de nota distintos: 987
+último sequencial do numerador: 5187
+números de nota repetidos: 13
+faturas com número repetido: 26
+  NF-004251: PED-00026, PED-00028
+  NF-004676: PED-00516, PED-00810
+  NF-004683: PED-00564, PED-00895
+  NF-004707: PED-00353, PED-00477
+  NF-004810: PED-00437, PED-00589
+  NF-004811: PED-00605, PED-00685
+  NF-004812: PED-00621, PED-00701
+  NF-004813: PED-00453, PED-00637
+  NF-004814: PED-00653, PED-00717
+  NF-004815: PED-00469, PED-00669
+  ... mais 3
+trilha de auditoria: ../../evidencias/case-a/auditoria-carga-1.log

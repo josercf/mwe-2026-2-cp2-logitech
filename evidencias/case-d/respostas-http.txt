@@ -1,0 +1,16 @@
+> POST /api/v1/notificacoes {"canal":"sms","destinatario":"+5511987650001","mensagem":"LogiTech: seu pedido 88412 sai para entrega hoje entre 13h e 17h."}
+{"entregue":false,"canal":"sms","tentativas":1,"identificador":""}
+< HTTP 502
+
+> POST /api/v1/notificacoes {"canal":"email","destinatario":"cliente.88413@logitech.example","mensagem":"Seu pedido 88413 sai para entrega hoje."}
+{"entregue":true,"canal":"email","tentativas":1,"identificador":"EML-RCS7GXOB"}
+< HTTP 202
+
+> POST /api/v1/notificacoes {"canal":"sms","destinatario":"+5521998760002","mensagem":"LogiTech: seu pedido 88414 sai para entrega hoje entre 8h e 12h."}
+{"entregue":false,"canal":"sms","tentativas":1,"identificador":""}
+< HTTP 502
+
+> POST /api/v1/notificacoes {"canal":"sms","destinatario":"+5531976540003","mensagem":"LogiTech: seu pedido 88415 sai para entrega hoje entre 13h e 17h."}
+{"entregue":false,"canal":"sms","tentativas":1,"identificador":""}
+< HTTP 502
+

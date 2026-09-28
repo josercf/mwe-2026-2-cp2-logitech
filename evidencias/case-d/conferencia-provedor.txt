@@ -1,0 +1,3 @@
+> POST http://localhost:9091/v1/mensagens {"telefone":"+5511987650001"}
+{"protocolo":"SMS-000004"}
+< HTTP 200

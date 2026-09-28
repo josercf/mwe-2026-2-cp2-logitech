@@ -1,0 +1,56 @@
+$ mvn -B clean test
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< br.com.fiap.logitech:pedidos >--------------------
+[INFO] Building logitech-pedidos 1.4.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ pedidos ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ pedidos ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ pedidos ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 24 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ pedidos ---
+[INFO] skip non existing resourceDirectory /src/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ pedidos ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ pedidos ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running br.com.fiap.logitech.pedidos.aplicacao.PedidoServiceTest
+11:53:04.785 [main] INFO br.com.fiap.logitech.pedidos.aplicacao.PedidoService -- pedido 2044065e-69fe-4cba-8a45-cdaa97a3efcb (INTERNACIONAL): emitindo fatura de 1035.00 por INVOICE
+11:53:04.790 [main] INFO br.com.fiap.logitech.pedidos.aplicacao.PedidoService -- pedido 72a5d197-1eec-45f2-9012-e01c224a1bf8 (CONTRATO): emitindo fatura de 1000.00 por FATURA_MENSAL
+11:53:04.791 [main] INFO br.com.fiap.logitech.pedidos.aplicacao.PedidoService -- pedido ebf73a3d-f55f-4b95-8730-8bd20dbf574b (PADRAO): emitindo fatura de 1000.00 por BOLETO
+11:53:04.793 [main] INFO br.com.fiap.logitech.pedidos.aplicacao.PedidoService -- pedido 11f1c619-fbd2-43c1-8ba1-31c13f662cbe (OURO): emitindo fatura de 950.00 por CARTAO_CORPORATIVO
+11:53:04.795 [main] INFO br.com.fiap.logitech.pedidos.aplicacao.PedidoService -- pedido 9f0048df-1595-4b14-b909-8942dc157ce3 (PADRAO): emitindo fatura de 1000.00 por BOLETO
+11:53:04.795 [main] INFO br.com.fiap.logitech.pedidos.aplicacao.PedidoService -- pedido 84df7ad7-81a9-4494-8507-9f0aba0d49b4 (PADRAO): emitindo fatura de 1000.00 por BOLETO
+11:53:04.796 [main] WARN br.com.fiap.logitech.pedidos.aplicacao.PedidoService -- faturamento indisponível para o pedido 84df7ad7-81a9-4494-8507-9f0aba0d49b4: faturamento fora do ar
+11:53:04.797 [main] INFO br.com.fiap.logitech.pedidos.aplicacao.PedidoService -- pedido ed335455-cb6e-41c7-a11d-b07e6557619c (CORTESIA): emitindo fatura de 0 por ISENTO
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 s -- in br.com.fiap.logitech.pedidos.aplicacao.PedidoServiceTest
+[INFO] Running br.com.fiap.logitech.pedidos.dominio.PedidoTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in br.com.fiap.logitech.pedidos.dominio.PedidoTest
+[INFO] Running br.com.fiap.logitech.pedidos.faturamento.ConectorFaturamentoTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in br.com.fiap.logitech.pedidos.faturamento.ConectorFaturamentoTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.612 s
+[INFO] Finished at: 2026-09-28T11:53:04-03:00
+[INFO] ------------------------------------------------------------------------

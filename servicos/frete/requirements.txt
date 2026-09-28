@@ -1,0 +1,8 @@
+# Dependências do serviço de frete da LogiTech.
+fastapi>=0.115
+uvicorn[standard]>=0.32
+pydantic>=2.9
+requests>=2.32
+# Teste, cliente HTTP do TestClient e script de medição
+pytest>=8.3
+httpx>=0.27

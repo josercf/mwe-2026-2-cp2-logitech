@@ -1,0 +1,9 @@
+node_modules/
+bin/
+obj/
+target/
+.venv/
+__pycache__/
+.pytest_cache/
+*.log.tmp
+.DS_Store

@@ -1,0 +1,10 @@
+[2026-09-28T14:45:55.893Z] notificacoes ouvindo em http://localhost:3001
+[2026-09-28T14:45:55.895Z] pilha de envio maxTentativas=3 esperaMs=200
+[2026-09-28T14:45:56.041Z] tentativa canal=sms destinatario=+5511987650001
+[2026-09-28T14:45:56.064Z] falha canal=sms motivo=provedor SMS respondeu 503
+[2026-09-28T14:45:56.080Z] tentativa canal=email destinatario=cliente.88413@logitech.example
+[2026-09-28T14:45:56.081Z] sucesso canal=email identificador=EML-RCS7GXOB
+[2026-09-28T14:45:56.098Z] tentativa canal=sms destinatario=+5521998760002
+[2026-09-28T14:45:56.100Z] falha canal=sms motivo=provedor SMS respondeu 503
+[2026-09-28T14:45:56.118Z] tentativa canal=sms destinatario=+5531976540003
+[2026-09-28T14:45:56.119Z] falha canal=sms motivo=provedor SMS respondeu 503

@@ -1,0 +1,21 @@
+# Medição: POST /api/v1/frete/cotacao, uma requisição por vez
+# Data: 28/09/2026. Ambiente: container python:3.12-slim, Python 3.12.14,
+# fastapi 0.141.1, starlette 1.7.0, uvicorn 0.54.0, requests 2.34.2, httpx 0.28.1.
+# Serviços, a partir de servicos/frete:
+#   uvicorn ferramentas.pedagio_simulado:app --port 8010          (PEDAGIO_LATENCIA_MS=300, padrão)
+#   PEDAGIO_URL=http://127.0.0.1:8010 uvicorn app.main:app --port 8000
+# Comando (3 execuções, depois de 1 requisição de aquecimento):
+#   python -m ferramentas.medir_latencia --n 1
+
+## execução 1
+req 01  inicio +0.000s  fim +0.323s  duracao 0.323s  status 200
+requisicoes 1  total 0.323s  menor 0.323s  mediana 0.323s  maior 0.323s
+
+## execução 2
+req 01  inicio +0.000s  fim +0.321s  duracao 0.321s  status 200
+requisicoes 1  total 0.321s  menor 0.321s  mediana 0.321s  maior 0.321s
+
+## execução 3
+req 01  inicio +0.000s  fim +0.339s  duracao 0.339s  status 200
+requisicoes 1  total 0.339s  menor 0.339s  mediana 0.339s  maior 0.339s
+

@@ -1,0 +1,48 @@
+# Medição: GET /api/v1/tarifas direto no simulador da concessionária, 10 requisições simultâneas
+# Data: 28/09/2026. Ambiente: container python:3.12-slim, Python 3.12.14,
+# fastapi 0.141.1, starlette 1.7.0, uvicorn 0.54.0, requests 2.34.2, httpx 0.28.1.
+# Serviços, a partir de servicos/frete:
+#   uvicorn ferramentas.pedagio_simulado:app --port 8010          (PEDAGIO_LATENCIA_MS=300, padrão)
+#   PEDAGIO_URL=http://127.0.0.1:8010 uvicorn app.main:app --port 8000
+# Comando (3 execuções):
+#   python -m ferramentas.medir_latencia --n 10 --url 'http://localhost:8010/api/v1/tarifas?origem=SAO&destino=LDB'
+
+## execução 1
+req 02  inicio +0.034s  fim +0.357s  duracao 0.323s  status 200
+req 03  inicio +0.034s  fim +0.358s  duracao 0.324s  status 200
+req 01  inicio +0.000s  fim +0.358s  duracao 0.358s  status 200
+req 04  inicio +0.034s  fim +0.358s  duracao 0.324s  status 200
+req 07  inicio +0.035s  fim +0.359s  duracao 0.323s  status 200
+req 08  inicio +0.037s  fim +0.359s  duracao 0.322s  status 200
+req 05  inicio +0.034s  fim +0.359s  duracao 0.324s  status 200
+req 10  inicio +0.038s  fim +0.359s  duracao 0.321s  status 200
+req 09  inicio +0.037s  fim +0.359s  duracao 0.322s  status 200
+req 06  inicio +0.034s  fim +0.359s  duracao 0.324s  status 200
+requisicoes 10  total 0.359s  menor 0.321s  mediana 0.323s  maior 0.358s
+
+## execução 2
+req 01  inicio +0.000s  fim +0.369s  duracao 0.369s  status 200
+req 02  inicio +0.028s  fim +0.369s  duracao 0.341s  status 200
+req 05  inicio +0.029s  fim +0.369s  duracao 0.340s  status 200
+req 04  inicio +0.029s  fim +0.369s  duracao 0.340s  status 200
+req 07  inicio +0.030s  fim +0.371s  duracao 0.341s  status 200
+req 09  inicio +0.031s  fim +0.373s  duracao 0.341s  status 200
+req 08  inicio +0.031s  fim +0.375s  duracao 0.345s  status 200
+req 10  inicio +0.032s  fim +0.375s  duracao 0.344s  status 200
+req 03  inicio +0.029s  fim +0.376s  duracao 0.347s  status 200
+req 06  inicio +0.029s  fim +0.376s  duracao 0.346s  status 200
+requisicoes 10  total 0.376s  menor 0.340s  mediana 0.343s  maior 0.369s
+
+## execução 3
+req 01  inicio +0.000s  fim +0.387s  duracao 0.386s  status 200
+req 03  inicio +0.052s  fim +0.393s  duracao 0.340s  status 200
+req 05  inicio +0.054s  fim +0.393s  duracao 0.340s  status 200
+req 04  inicio +0.053s  fim +0.393s  duracao 0.340s  status 200
+req 06  inicio +0.054s  fim +0.394s  duracao 0.340s  status 200
+req 02  inicio +0.051s  fim +0.395s  duracao 0.344s  status 200
+req 07  inicio +0.054s  fim +0.399s  duracao 0.345s  status 200
+req 08  inicio +0.056s  fim +0.400s  duracao 0.344s  status 200
+req 10  inicio +0.057s  fim +0.400s  duracao 0.343s  status 200
+req 09  inicio +0.056s  fim +0.401s  duracao 0.344s  status 200
+requisicoes 10  total 0.401s  menor 0.340s  mediana 0.344s  maior 0.386s
+

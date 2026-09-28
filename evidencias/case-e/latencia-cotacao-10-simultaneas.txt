@@ -1,0 +1,48 @@
+# Medição: POST /api/v1/frete/cotacao, 10 requisições simultâneas
+# Data: 28/09/2026. Ambiente: container python:3.12-slim, Python 3.12.14,
+# fastapi 0.141.1, starlette 1.7.0, uvicorn 0.54.0, requests 2.34.2, httpx 0.28.1.
+# Serviços, a partir de servicos/frete:
+#   uvicorn ferramentas.pedagio_simulado:app --port 8010          (PEDAGIO_LATENCIA_MS=300, padrão)
+#   PEDAGIO_URL=http://127.0.0.1:8010 uvicorn app.main:app --port 8000
+# Comando (3 execuções, depois de 1 requisição de aquecimento):
+#   python -m ferramentas.medir_latencia --n 10
+
+## execução 1
+req 02  inicio +0.019s  fim +2.294s  duracao 2.275s  status 200
+req 04  inicio +0.020s  fim +2.294s  duracao 2.274s  status 200
+req 06  inicio +0.020s  fim +2.294s  duracao 2.274s  status 200
+req 07  inicio +0.020s  fim +2.294s  duracao 2.274s  status 200
+req 01  inicio +0.000s  fim +2.295s  duracao 2.295s  status 200
+req 03  inicio +0.020s  fim +2.295s  duracao 2.275s  status 200
+req 05  inicio +0.020s  fim +2.295s  duracao 2.275s  status 200
+req 10  inicio +0.020s  fim +3.212s  duracao 3.192s  status 200
+req 08  inicio +0.020s  fim +3.212s  duracao 3.192s  status 200
+req 09  inicio +0.020s  fim +3.212s  duracao 3.192s  status 200
+requisicoes 10  total 3.212s  menor 2.274s  mediana 2.275s  maior 3.192s
+
+## execução 2
+req 02  inicio +0.030s  fim +0.660s  duracao 0.630s  status 200
+req 01  inicio +0.000s  fim +0.660s  duracao 0.660s  status 200
+req 04  inicio +0.032s  fim +3.112s  duracao 3.080s  status 200
+req 05  inicio +0.032s  fim +3.117s  duracao 3.085s  status 200
+req 10  inicio +0.033s  fim +3.118s  duracao 3.085s  status 200
+req 07  inicio +0.032s  fim +3.118s  duracao 3.085s  status 200
+req 08  inicio +0.033s  fim +3.118s  duracao 3.085s  status 200
+req 09  inicio +0.033s  fim +3.118s  duracao 3.085s  status 200
+req 06  inicio +0.032s  fim +3.119s  duracao 3.086s  status 200
+req 03  inicio +0.031s  fim +3.119s  duracao 3.088s  status 200
+requisicoes 10  total 3.120s  menor 0.630s  mediana 3.085s  maior 3.088s
+
+## execução 3
+req 03  inicio +0.019s  fim +2.988s  duracao 2.969s  status 200
+req 04  inicio +0.019s  fim +2.989s  duracao 2.969s  status 200
+req 06  inicio +0.021s  fim +2.989s  duracao 2.968s  status 200
+req 07  inicio +0.021s  fim +2.989s  duracao 2.968s  status 200
+req 08  inicio +0.021s  fim +2.989s  duracao 2.968s  status 200
+req 09  inicio +0.022s  fim +2.990s  duracao 2.968s  status 200
+req 01  inicio +0.001s  fim +2.990s  duracao 2.989s  status 200
+req 02  inicio +0.018s  fim +2.990s  duracao 2.972s  status 200
+req 05  inicio +0.020s  fim +2.990s  duracao 2.970s  status 200
+req 10  inicio +0.022s  fim +3.278s  duracao 3.256s  status 200
+requisicoes 10  total 3.278s  menor 2.968s  mediana 2.969s  maior 3.256s
+

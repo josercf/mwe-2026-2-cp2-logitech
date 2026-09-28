@@ -1,0 +1,20 @@
+$ cd servicos/notificacoes && npx vitest run
+
+ RUN  v4.1.10 /workspaces/mwe-2026-2-cp2/servicos/notificacoes
+
+ ✓ tests/rastreio.test.ts (5 tests) 4ms
+ ✓ tests/composicao.test.ts (4 tests) 5ms
+ ✓ tests/decoradores.test.ts (10 tests) 67ms
+stdout | tests/servidor.test.ts > API de notificações > aceita uma notificação válida e devolve 202
+[2026-09-28T14:46:01.015Z] tentativa canal=email destinatario=cliente@logitech.example
+
+stdout | tests/servidor.test.ts > API de notificações > aceita uma notificação válida e devolve 202
+[2026-09-28T14:46:01.016Z] sucesso canal=email identificador=EML-JLJMUZ7Q
+
+ ✓ tests/servidor.test.ts (7 tests) 33ms
+
+ Test Files  4 passed (4)
+      Tests  26 passed (26)
+   Start at  11:46:00
+   Duration  605ms (transform 148ms, setup 0ms, import 289ms, tests 109ms, environment 0ms)
+

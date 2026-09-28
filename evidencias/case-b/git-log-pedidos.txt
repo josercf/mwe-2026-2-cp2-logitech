@@ -1,0 +1,47 @@
+$ git log --stat=200 -- servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/aplicacao servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento
+commit 148408daf0c2323d0de517afb80a30000c81b3ed
+Author: Rafael Tavares <rafael.tavares@logitech.example>
+Date:   Mon Aug 24 14:53:40 2026 -0300
+
+    feat(pedidos): oferece frete de cortesia para as ações do comercial
+
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/aplicacao/PedidoService.java      |  4 ++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/ConectorCortesia.java | 31 +++++++++++++++++++++++++++++++
+ 2 files changed, 35 insertions(+)
+
+commit 420d7a30db0226fd935a8472ea11e6b8e9e417d7
+Author: Bruno Lemos <bruno.lemos@logitech.example>
+Date:   Mon Jul 6 09:27:18 2026 -0300
+
+    feat(pedidos): atende clientes INTERNACIONAL por invoice com taxa de remessa
+
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/aplicacao/PedidoService.java           |  4 ++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/ConectorInternacional.java | 38 ++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 42 insertions(+)
+
+commit 8e4313768da9af57802423bfcb77d485731c9704
+Author: Rafael Tavares <rafael.tavares@logitech.example>
+Date:   Mon May 18 16:41:07 2026 -0300
+
+    feat(pedidos): atende clientes CONTRATO com fatura mensal
+
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/aplicacao/PedidoService.java          |  4 ++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/ConectorFaturaMensal.java | 29 +++++++++++++++++++++++++++++
+ 2 files changed, 33 insertions(+)
+
+commit 1d600d942de70a9ef64e7f0c62e71c6b42b1d619
+Author: Marina Okada <marina.okada@logitech.example>
+Date:   Mon Mar 9 10:14:32 2026 -0300
+
+    feat(pedidos): abre pedidos com faturamento por boleto e cartão corporativo
+
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/aplicacao/PedidoNaoEncontradoException.java       |  8 ++++++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/aplicacao/PedidoService.java                      | 84 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/ClienteFaturamento.java               | 18 ++++++++++++++++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/ConectorBoleto.java                   | 29 +++++++++++++++++++++++++++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/ConectorCartaoCorporativo.java        | 37 +++++++++++++++++++++++++++++++++++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/ConectorFaturamento.java              | 16 ++++++++++++++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/ConectorNaoEncontradoException.java   |  8 ++++++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/FaturaRecusadaException.java          | 20 ++++++++++++++++++++
+ servicos/pedidos/src/main/java/br/com/fiap/logitech/pedidos/faturamento/FaturamentoIndisponivelException.java | 16 ++++++++++++++++
+ 9 files changed, 236 insertions(+)

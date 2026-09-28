@@ -1,0 +1,4 @@
+[2026-09-28T14:45:56.058Z] provedor POST /v1/mensagens telefone=+5511987650001 chamada=1 status=503
+[2026-09-28T14:45:56.099Z] provedor POST /v1/mensagens telefone=+5521998760002 chamada=1 status=503
+[2026-09-28T14:45:56.119Z] provedor POST /v1/mensagens telefone=+5531976540003 chamada=1 status=503
+[2026-09-28T14:45:57.154Z] provedor POST /v1/mensagens telefone=+5511987650001 chamada=2 status=200

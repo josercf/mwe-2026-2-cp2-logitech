@@ -1,0 +1,45 @@
+# Saída do pytest do serviço de frete
+# Data: 28/09/2026. Ambiente: container python:3.12-slim, Python 3.12.14, pytest 9.1.1.
+# Comando, a partir de servicos/frete:
+#   python -m pytest -v -p no:cacheprovider
+
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python
+rootdir: /frete
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.15.1
+collecting ... collected 30 items
+
+tests/test_estrategias.py::test_protocolo_declara_cotar_e_modalidade PASSED [  3%]
+tests/test_estrategias.py::test_cada_estrategia_cumpre_o_protocolo[FreteExpresso] PASSED [  6%]
+tests/test_estrategias.py::test_cada_estrategia_cumpre_o_protocolo[FreteEconomico] PASSED [ 10%]
+tests/test_estrategias.py::test_cada_estrategia_cumpre_o_protocolo[FretePadrao] PASSED [ 13%]
+tests/test_estrategias.py::test_cada_estrategia_cumpre_o_protocolo[FreteRefrigerado] PASSED [ 16%]
+tests/test_estrategias.py::test_valor_e_prazo_na_rota_de_referencia[FreteExpresso-545.0-1] PASSED [ 20%]
+tests/test_estrategias.py::test_valor_e_prazo_na_rota_de_referencia[FreteEconomico-265.0-4] PASSED [ 23%]
+tests/test_estrategias.py::test_valor_e_prazo_na_rota_de_referencia[FretePadrao-380.0-2] PASSED [ 26%]
+tests/test_estrategias.py::test_valor_e_prazo_na_rota_de_referencia[FreteRefrigerado-695.0-2] PASSED [ 30%]
+tests/test_estrategias.py::test_expresso_e_sempre_mais_caro_e_mais_rapido_que_economico PASSED [ 33%]
+tests/test_estrategias.py::test_prazo_minimo_do_expresso_e_de_um_dia PASSED [ 36%]
+tests/test_estrategias.py::test_valor_base_arredonda_em_duas_casas PASSED [ 40%]
+tests/test_registro.py::test_as_quatro_modalidades_estao_registradas PASSED [ 43%]
+tests/test_registro.py::test_obter_devolve_uma_estrategia_de_verdade PASSED [ 46%]
+tests/test_registro.py::test_obter_recusa_modalidade_desconhecida PASSED [ 50%]
+tests/test_registro.py::test_registrar_recusa_nome_repetido PASSED       [ 53%]
+tests/test_registro.py::test_modalidades_vem_ordenado_e_sem_repeticao PASSED [ 56%]
+tests/test_rota.py::test_health_responde_ok PASSED                       [ 60%]
+tests/test_rota.py::test_cotacao_expressa_no_credito PASSED              [ 63%]
+tests/test_rota.py::test_cotacao_economica_no_debito PASSED              [ 66%]
+tests/test_rota.py::test_cotacao_refrigerada_na_rota_de_referencia PASSED [ 70%]
+tests/test_rota.py::test_modalidade_desconhecida_devolve_422 PASSED      [ 73%]
+tests/test_rota.py::test_meio_de_pagamento_fora_do_contrato_devolve_422 PASSED [ 76%]
+tests/test_rota.py::test_peso_negativo_e_recusado_pelo_contrato_pydantic PASSED [ 80%]
+tests/test_rota.py::test_restricoes_de_circulacao PASSED                 [ 83%]
+tests/test_rota.py::test_rota_de_modalidades_lista_o_registro PASSED     [ 86%]
+tests/test_rota.py::test_openapi_publica_o_contrato_da_cotacao PASSED    [ 90%]
+tests/test_taxas.py::test_taxa_no_debito PASSED                          [ 93%]
+tests/test_taxas.py::test_taxa_no_credito PASSED                         [ 96%]
+tests/test_taxas.py::test_taxa_arredonda_em_duas_casas PASSED            [100%]
+
+============================== 30 passed in 0.39s ==============================
